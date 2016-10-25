@@ -14,3 +14,7 @@
   <label>Oauth authentification:</label>
   <%= check_box_tag "settings[oauth_authentification]", true, @settings[:oauth_authentification] %>
 </p>
+<p>
+  <label>Skip account activation by email:</label>
+  <%= check_box_tag "settings[skip_email_activation]", 1, @settings[:skip_email_activation] %>
+</p>

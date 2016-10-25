@@ -58,8 +58,14 @@ class RedmineOauthController < AccountController
 
       case Setting.self_registration
       when '1'
-        register_by_email_activation(user) do
-          onthefly_creation_failed(user)
+        unless Setting.plugin_redmine_omniauth_google[:skip_email_activation]
+          register_by_email_activation(user) do
+            onthefly_creation_failed(user)
+          end
+        else
+          register_automatically(user) do
+            onthefly_creation_failed(user)
+          end
         end
       when '3'
         register_automatically(user) do
