@@ -1,0 +1,7 @@
+<% content_for(:header_tags) do %>
+  <%= stylesheet_link_tag 'buttons', :plugin => 'redmine_omniauth_google' %>
+<% end %>
+
+<% if Setting.plugin_redmine_omniauth_google[:oauth_authentification] %>
+  <%= link_to image_tag('googleBtn.png', :plugin => 'redmine_omniauth_google'), oauth_google_path(:back_url => back_url), :class => "signin-button" %>
+<% end %>
