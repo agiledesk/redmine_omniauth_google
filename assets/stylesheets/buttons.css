@@ -1,3 +1,16 @@
 body.controller-account.action-login #content { text-align: center; padding-top: 4em; }
 
 #login-form table { margin-top: 1em; }
+
+.gitlab-login {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.gitlab-login-button {
+}
+
+.gitlab-login-icon {
+  height: 14px;
+  padding: 0;
+}

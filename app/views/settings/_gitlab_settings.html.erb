@@ -1,0 +1,16 @@
+<p>
+  <%= label_tag 'settings[use_gitlab_authentication]', 'Enable GitLab authentication?' %>
+  <%= check_box_tag "settings[use_gitlab_authentication]", true, @settings[:use_gitlab_authentication] %>
+</p>
+<p>
+  <%= label_tag 'settings[gitlab_url]', 'GitLab URL:' %>
+  <%= text_field_tag 'settings[gitlab_url]', @settings[:gitlab_url] %>
+</p>
+<p>
+  <%= label_tag 'settings[gitlab_client_id]', 'Gitlab Application ID:' %>
+  <%= text_field_tag 'settings[gitlab_client_id]', @settings[:gitlab_client_id] %>
+</p>
+<p>
+  <%= label_tag 'settings[gitlab_client_secret]', 'Gitlab Secret:' %>
+  <%= text_field_tag 'settings[gitlab_client_secret]', @settings[:gitlab_client_secret] %>
+</p>
